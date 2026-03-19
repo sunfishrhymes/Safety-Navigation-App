@@ -1,0 +1,103 @@
+.home-page {
+  min-height: calc(100vh - 64px);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 32px;
+  gap: 40px;
+}
+
+.home-hero {
+  text-align: center;
+  max-width: 520px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(36, 130, 74, 0.14);
+  border: 1px solid rgba(36, 130, 74, 0.33);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #b9dfc8;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.hero-title {
+  font-size: clamp(32px, 7vw, 52px);
+  font-weight: 900;
+  color: var(--text-strong);
+  line-height: 1.1;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--charlotte-green-soft), var(--panthers-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+}
+
+@media (max-width: 360px) {
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-footer {
+  width: 100%;
+  max-width: 520px;
+}
+
+.btn-continue {
+  width: 100%;
+  padding: 18px;
+  border-radius: 14px;
+  border: 2px dashed var(--line);
+  background: transparent;
+  color: #73877a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-continue.ready {
+  background: linear-gradient(135deg, var(--charlotte-green-soft), var(--charlotte-green));
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(36, 130, 74, 0.4);
+}
+
+.btn-continue.ready:hover {
+  background: linear-gradient(135deg, var(--charlotte-green), var(--charlotte-green-strong));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(36, 130, 74, 0.5);
+}
+
+.btn-continue.ready:active {
+  transform: translateY(0);
+}

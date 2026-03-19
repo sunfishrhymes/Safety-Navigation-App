@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 64px;
+  background: color-mix(in srgb, var(--ink-black) 72%, var(--charlotte-green) 28%);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  font-size: 24px;
+}
+
+.navbar-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-strong);
+  letter-spacing: 2px;
+}
+
+.navbar-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 4px;
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .navbar-subtitle {
+    display: inline;
+  }
+}
+
+.navbar-mode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
+.mode-icon {
+  font-size: 16px;
+}
+
+.mode-label {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.navbar-steps {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.step {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 2px solid var(--line);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.step.active {
+  background: var(--charlotte-green);
+  border-color: var(--charlotte-green);
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(36, 130, 74, 0.3);
+}
+
+.step.done {
+  background: var(--panthers-blue);
+  border-color: var(--panthers-blue);
+  color: #fff;
+}
+
+.step-line {
+  width: 20px;
+  height: 2px;
+  background: var(--line);
+}

@@ -1,0 +1,76 @@
+/* ── Global Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --charlotte-green: #24824a;
+  --charlotte-green-strong: #1c663a;
+  --charlotte-green-soft: #2f9d5e;
+  --panthers-blue: #0085ca;
+  --hornets-teal: #00788c;
+  --forty9ers-red: #aa0000;
+  --ink-black: #0b0d0c;
+  --slate-black: #121615;
+  --surface-1: #161d19;
+  --surface-2: #1f2823;
+  --surface-3: #27332d;
+  --line: #34433b;
+  --line-strong: #476054;
+  --text-strong: #f7faf8;
+  --text-main: #e8efeb;
+  --text-muted: #9eb2a6;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Trebuchet MS', 'Roboto',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(1200px 500px at -10% -10%, rgba(36, 130, 74, 0.24), transparent 65%),
+    radial-gradient(900px 420px at 120% 0%, rgba(0, 133, 202, 0.18), transparent 60%),
+    var(--ink-black);
+  color: var(--text-strong);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5c7a6b;
+}
+
